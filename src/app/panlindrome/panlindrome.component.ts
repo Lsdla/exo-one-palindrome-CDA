@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {logger} from 'codelyzer/util/logger';
 
 @Component({
   selector: 'app-panlindrome',
@@ -11,7 +12,7 @@ export class PanlindromeComponent implements OnInit {
   postForm = new FormGroup({
     name:new FormControl('',[Validators.required]),
   })
-  input_text :any;
+  input_text : string = null;
   palindrome:any;
 
   constructor() { }
@@ -20,21 +21,25 @@ export class PanlindromeComponent implements OnInit {
   }
 
   valider(){
-    this.input_text = this.postForm?.value?.name;
+    this.input_text = this.postForm.value.name;
     //console.log(this.input_text);
-    
-    this.palindrome = this.input_text.match(/[A-Za-z0-9]/gi).join("").toLowerCase();
-    //console.log(this.palindrome);
-    
-    for(let i = 0 ; i < Math.floor(this.palindrome.length/2);i++){
-      if(this.palindrome.charAt(i) !== this.palindrome.charAt(this.palindrome.length-i-1)){
-        return false;
-        
+
+    if (this.input_text != ""){
+      this.palindrome = this.input_text.match(/[A-Za-z0-9]/gi).join('').toLowerCase();
+      //console.log(this.palindrome);
+      for(let i = 0 ; i < Math.floor(this.palindrome.length/2);i++){
+        if(this.palindrome.charAt(i) !== this.palindrome.charAt(this.palindrome.length-i-1)){
+          return false;
+        }
       }
+      return true;
     }
-    return true;
   }
 
-  
+  delete(){
+    console.log("tt");
+    this.input_text = this.postForm.value.name = '';
+    console.log(this.input_text);
+  }
 
 }

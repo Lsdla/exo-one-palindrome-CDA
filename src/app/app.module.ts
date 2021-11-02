@@ -18,7 +18,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     PanlindromeComponent,
     ChaineCaracteresComponent,
     ApiPublicComponent,
-    HomeComponent
+    HomeComponent,
     LayoutComponent,
     NavBarComponent,
     FooterComponent
