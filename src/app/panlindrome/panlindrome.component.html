@@ -1,0 +1,18 @@
+<nav>
+  <div>
+    <section>
+      <div class="container">
+        <form (ngSubmit)="valider()" [formGroup]="postForm">
+          <div class="input_cont">
+            <input type="text" id="name-input" placeholder="name" formControlName="name">
+          </div>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="cont_p" >
+      <p>{{ this.palindrome }} </p>
+    </div>
+  </div>
+</nav>
