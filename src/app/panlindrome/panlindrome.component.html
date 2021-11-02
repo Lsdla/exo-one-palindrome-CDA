@@ -6,13 +6,14 @@
           <div class="input_cont">
             <input type="text" id="name-input" placeholder="name" formControlName="name">
           </div>
-          <button type="submit">SEND</button>
+          <button (click)="delete()">Effacer</button>
         </form>
       </div>
     </section>
 
     <div class="cont_p" >
-      <p>{{ this.palindrome }} </p>
+      <p *ngIf="valider() == true">Le résultat est un palindrome</p>
+      <p *ngIf="valider() == false">Le résultat n'est pas un palindrome</p>
     </div>
   </div>
 </nav>
