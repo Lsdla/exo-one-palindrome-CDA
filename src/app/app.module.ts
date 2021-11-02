@@ -8,6 +8,9 @@ import { ChaineCaracteresComponent } from './chaine-caracteres/chaine-caracteres
 import { ApiPublicComponent } from './api-public/api-public.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LayoutComponent } from './layout/layout.component';
+import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChaineCaracteresComponent,
     ApiPublicComponent,
     HomeComponent
+    LayoutComponent,
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
