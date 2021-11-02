@@ -1,0 +1,29 @@
+nav {
+  border: 1px solid;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+
+    .input_cont {
+      margin: 5px;
+
+      input {
+        width: 250px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.cont_p {
+  text-align: center;
+}

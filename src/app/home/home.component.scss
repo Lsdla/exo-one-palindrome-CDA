@@ -1,0 +1,45 @@
+section{
+
+
+    // .cont_img{
+    //     border: 3px solid;
+    //     background-size: cover;
+    //     width: 90%;
+    //     height: 90%;
+
+
+    //   img{
+       
+
+    //   }
+    // }
+
+
+    .container-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 200px;
+
+        .carre{
+            cursor: pointer;
+            margin: 20px;
+            background-color: gray;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+
+
+        }
+
+        .carre:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+            color: white;
+        }
+    }
+}
